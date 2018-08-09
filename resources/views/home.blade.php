@@ -20,7 +20,7 @@
         </div>
         <div class="col-md-8">
           <br>
-          <form method="post" action="{{url('add_post')}}" enctype="multipart/form-data">
+          <form method="post" action="{{url('add_post')}}">
              @csrf
                @if ($errors->any())
                     <div class="alert alert-danger">
