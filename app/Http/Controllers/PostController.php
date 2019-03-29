@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\PostCheck;
 class PostController extends Controller
 {
     /**
@@ -22,9 +22,11 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function addPost()
+    public function addPost(PostCheck $request)
     {
-        return view('home');
+        //$id = Auth::id();
+        
+        return redirect('/home')->with('status', 'Your post has been submitted.');
     }
 
 }
