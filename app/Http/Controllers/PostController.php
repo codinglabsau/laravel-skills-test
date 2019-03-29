@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostCheck;
 class PostController extends Controller
@@ -24,7 +25,14 @@ class PostController extends Controller
      */
     public function addPost(PostCheck $request)
     {
-        //$id = Auth::id();
+    
+        $post = new Post;
+
+        $post->name = $request->name;
+        $post->description = $request->description;
+        $post->user_id = Auth::id();
+
+        $post->save();
         
         return redirect('/home')->with('status', 'Your post has been submitted.');
     }
