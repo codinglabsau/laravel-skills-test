@@ -19,5 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Add a post
+// Add a post by post method
 Route::post('/post', 'PostController@addPost')->name('home');

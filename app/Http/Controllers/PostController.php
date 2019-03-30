@@ -19,9 +19,10 @@ class PostController extends Controller
     }
 
     /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
+     * addPost function
+     * Description: Add a post to the database  
+     * @param object $request
+     * @return redirect
      */
     public function addPost(PostCheck $request)
     {
