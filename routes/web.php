@@ -11,6 +11,10 @@
 |
 */
 
+use App\Post;
+
+Route::resource('post', 'PostController');
+
 Route::get('/', function () {
     return view('welcome');
 });

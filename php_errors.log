@@ -1,0 +1,24 @@
+[03-May-2019 04:37:15 UTC] PHP Warning:  require(/home/ubuntu/workspace/laravel-skills-test/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/laravel-skills-test/public/index.php on line 24
+[03-May-2019 04:37:15 UTC] PHP Fatal error:  require(): Failed opening required '/home/ubuntu/workspace/laravel-skills-test/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/laravel-skills-test/public/index.php on line 24
+[03-May-2019 04:37:25 UTC] PHP Warning:  require(/home/ubuntu/workspace/laravel-skills-test/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/laravel-skills-test/public/index.php on line 24
+[03-May-2019 04:37:25 UTC] PHP Fatal error:  require(): Failed opening required '/home/ubuntu/workspace/laravel-skills-test/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/laravel-skills-test/public/index.php on line 24
+[03-May-2019 04:37:50 UTC] PHP Warning:  require(/home/ubuntu/workspace/laravel-skills-test/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/laravel-skills-test/public/index.php on line 24
+[03-May-2019 04:37:50 UTC] PHP Fatal error:  require(): Failed opening required '/home/ubuntu/workspace/laravel-skills-test/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/laravel-skills-test/public/index.php on line 24
+[03-May-2019 04:41:02 UTC] PHP Warning:  require(/home/ubuntu/workspace/laravel-skills-test/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/laravel-skills-test/public/index.php on line 24
+[03-May-2019 04:41:02 UTC] PHP Fatal error:  require(): Failed opening required '/home/ubuntu/workspace/laravel-skills-test/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/laravel-skills-test/public/index.php on line 24
+[03-May-2019 05:21:12 UTC] PHP Warning:  require(/home/ubuntu/workspace/laravel-skills-test/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/laravel-skills-test/public/index.php on line 24
+[03-May-2019 05:21:12 UTC] PHP Fatal error:  require(): Failed opening required '/home/ubuntu/workspace/laravel-skills-test/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/laravel-skills-test/public/index.php on line 24
+[03-May-2019 05:29:23 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/laravel-skills-test/vendor/symfony/http-foundation/Response.php on line 501
+[03-May-2019 05:29:23 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[03-May-2019 05:29:35 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/laravel-skills-test/vendor/symfony/http-foundation/Response.php on line 501
+[03-May-2019 05:29:35 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[03-May-2019 05:36:26 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/laravel-skills-test/vendor/symfony/http-foundation/Response.php on line 501
+[03-May-2019 05:36:26 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[03-May-2019 05:36:38 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/laravel-skills-test/vendor/symfony/http-foundation/Response.php on line 501
+[03-May-2019 05:36:38 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[03-May-2019 05:39:34 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/laravel-skills-test/vendor/symfony/http-foundation/Response.php on line 501
+[03-May-2019 05:39:34 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[03-May-2019 05:39:40 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/laravel-skills-test/vendor/symfony/http-foundation/Response.php on line 501
+[03-May-2019 05:39:40 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[03-May-2019 05:44:16 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/laravel-skills-test/vendor/symfony/http-foundation/Response.php on line 501
+[03-May-2019 05:44:16 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
