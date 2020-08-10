@@ -10,14 +10,11 @@ class PostController extends Controller
 {
     public function index()
     {
-
         return Post::all();
-
     }
 
     public function create()
     {
-
         return view('home');
     }
 

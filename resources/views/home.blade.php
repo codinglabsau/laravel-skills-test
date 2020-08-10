@@ -17,8 +17,13 @@
                 </div>
 
                 <form method="POST" action="{{ route('post') }}">
+                    @if(session()->has('message'))
+                        <div class="alert alert-success">
+                            {{ session()->get('message') }}
+                        </div>
+                    @endif
                     @csrf
-
+                    <h1 class="text-center"> Create a post </h1>
                     <div class="form-group row">
                         <div class="col-md-6 mx-auto">
                             <label for="name" class="col-form-label text-md-right">{{ __('Name') }}</label>
@@ -52,12 +57,6 @@
                             </button>
                         </div>
                     </div>
-
-                    @if(session()->has('message'))
-                        <div class="alert alert-success">
-                            {{ session()->get('message') }}
-                        </div>
-                    @endif
                 </form>
             </div>
         </div>
