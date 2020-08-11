@@ -14,7 +14,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -28,7 +27,7 @@ class HomeController extends Controller
 
         // Normally This should be in the a reusable code. For Demo Purpose only
         $sort = key_exists('sort', $request->all()) ? $request->sort : 'created_at';
-        $direction = key_exists('direction', $request->all()) ? $request->direction : 'asc';
+        $direction = key_exists('direction', $request->all()) ? $request->direction : 'desc';
 
 
         $user = Auth::user();

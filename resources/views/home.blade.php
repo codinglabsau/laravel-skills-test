@@ -4,18 +4,25 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success my-2 alert-dismissible fade show" role="alert">
+                    {{ $message  }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
             <div class="card">
                 <div class="card-header d-flex align-items-center justify-content-between">
                     <h3>{{ $user->name }} Posts</h3>
 
-                    <a href="#" class="btn btn-primary btn-sm"> New Post </a>
+                    <a href="{{ route('posts.create') }}" class="btn btn-primary btn-sm"> New Post </a>
                 </div>
 
                     <div class="card-body">
                         <table class="table">
                             <thead>
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">
                                     <a href="{{ route('home', ['sort' => 'name', 'direction' => $direction == 'asc' ? 'desc': 'asc']) }}">
                                         Name
@@ -58,7 +65,6 @@
                             <tbody>
                             @foreach($posts as $post)
                                 <tr>
-                                    <th scope="row">{{ $loop->index + 1 }}</th>
                                     <td>{{ $post->name  }}</td>
                                     <td>{{ $post->shorten }}</td>
                                     <td>{{ $post->created }}</td>
