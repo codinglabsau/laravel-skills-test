@@ -69,7 +69,7 @@
                         </table>
                     </div>
                     <div class="card-footer">
-                        {{ $posts->links() }}
+                        {{ $posts->withQueryString()->links() }}
                     </div>
                 </div>
             </div>
