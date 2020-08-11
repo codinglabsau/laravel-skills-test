@@ -22,13 +22,19 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index()
+    public function index(Request $request)
     {
         $pageSize = env('PAGE_SIZE', 15);
 
-        $user = Auth::user();
-        $posts = $user->posts()->orderBy('created-at', 'asc')->paginate($pageSize);
+        // Normally This should be in the a reusable code. For Demo Purpose only
+        $sort = key_exists('sort', $request->all()) ? $request->sort : 'created_at';
+        $direction = key_exists('direction', $request->all()) ? $request->direction : 'asc';
 
-        return view('home', compact('posts', 'user'));
+
+        $user = Auth::user();
+        $posts = $user->posts()->orderBy($sort, $direction)->paginate($pageSize);
+
+        return view('home',
+            compact('posts', 'user', 'sort', 'direction'));
     }
 }

@@ -21,5 +21,8 @@
   },
   "engines": {
     "yarn": "YARN NO LONGER USED - use npm instead."
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0"
   }
 }
