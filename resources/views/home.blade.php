@@ -76,7 +76,7 @@
                                 <h3>{{ $post->name }}</h3>
                                 <p>{{ $post->description }}</p>
                                 <input type='submit' form="delete-{{$post->id}}" class="btn btn-danger" value='Delete'>
-                                <form id="delete-{{$post->id}}" method="POST" action="{{ action('HomeController@destroy', ['id' => $post->id]) }}">
+                                <form id="delete-{{$post->id}}" method="POST" action="{{ action('HomeController@destroy', ['post' => $post->id]) }}">
                                     @csrf
                                     @method('DELETE')
                                 </form>

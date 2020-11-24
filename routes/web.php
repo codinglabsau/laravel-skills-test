@@ -19,4 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/post', 'HomeController@store');
-Route::delete('/post/{id}', 'HomeController@destroy');
+Route::delete('/post/{post}', 'HomeController@destroy');

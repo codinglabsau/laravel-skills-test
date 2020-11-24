@@ -94,13 +94,11 @@ class HomeController extends Controller
     /**
      * Remove the specified post (and associated image, if applicable) from storage.
      *
-     * @param  int  $id
+     * @param  Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(int $id)
+    public function destroy(Post $post)
     {
-        //Find post by id.
-        $post = Post::findOrFail($id);
         $existingImage = $post->image_path;
 
         //Delete image from storage, if a path for it exists
