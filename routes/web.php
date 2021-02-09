@@ -11,6 +11,8 @@
 |
 */
 
+Route::post('create_post', 'HomeController@store');
+
 Route::get('/', function () {
     return view('welcome');
 });

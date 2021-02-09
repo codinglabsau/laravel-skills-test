@@ -73,6 +73,10 @@
 
         <main class="py-4">
             @yield('content')
+            
+            @if(Session::has('success'))
+                <p class="alert alert-success">{{ Session::get('success') }}</p>
+            @endif
         </main>
     </div>
 </body>
