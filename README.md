@@ -1,8 +1,7 @@
 Jaydel Bujawe Laravel Skills Test
 
 How long did you spend to complete this test? 
-- About 4 days. 
-- 2/3 days figuring out Homestead installation, the rest completing the task.
+- About 5 days. 
 - About to attempt bonus tasks.
 
 What was easy?
