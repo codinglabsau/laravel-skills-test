@@ -30,17 +30,21 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-        dd('request', $request);
+        // dd('request', $request);
         $this->validate($request, [
             'name' => 'required|unique:posts,name',
             'description' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'image' => 'required|image|mimes:jpg,jpeg,png,svg,gif|max:2048',
         ]);
+        $image_store = request()->file('image')->store('images', 'public');
+
         $post = new Post();
         $post->user_id = Auth::user()->id;
         $post->name = $request->name;
         $post->description = $request->description;
+        $post->image = $image_store;
         $post->save();
         return redirect('home')->with('status', 'Post Created Successfully!');
+
     }
 }
