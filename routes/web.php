@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ImageUploadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +24,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('add','home');
 Route::post('add',[PostsController::class,'addData']);
+
+Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload');
+Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');
+
+Route::get('user/create', [ HomeController::class, 'create' ]);
+Route::post('user/create', [ HomeController::class, 'store' ]);
