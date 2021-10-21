@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,6 +13,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::post('post', 'PostController@store');//this route directs to the store function in the PostController
 
 Route::get('/', function () {
     return view('welcome');
