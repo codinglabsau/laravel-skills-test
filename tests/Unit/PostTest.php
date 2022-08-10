@@ -26,7 +26,7 @@ class PosTest extends TestCase
             'user_id' => 1,
             'name' => $this->faker->name(),
             'description' => $this->faker->text(),
-            'image' => "image.jpg",
+            'image' => "/storage/images/image.jpg",
 
         ];
 
