@@ -13,12 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes();
+
+
+//Post Route
+Route::group([
+    'middleware' => ['auth']
+], function(){
+    Route::get('/', [App\Http\Controllers\PostController::class, 'create'])->name('post');
+
+	Route::post('/store', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
+
+	Route::get('/post-list', [App\Http\Controllers\PostController::class, 'index'])->name('post.index');
+	Route::get('/post-edit/{id}', [App\Http\Controllers\PostController::class, 'edit'])->name('post.edit');
+	Route::put('/post-edit/{id}', [App\Http\Controllers\PostController::class, 'update'])->name('post.update');
+	Route::delete('/post-delete/{id}', [App\Http\Controllers\PostController::class, 'destroy'])->name('post.destroy');
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';

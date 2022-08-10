@@ -1,3 +1,40 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*Single File Upload Thumbnai*/
+.custom-thumbnail {
+    width: 160px;
+    height: 170px;
+    object-fit: contain;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.image-margin {
+    margin-bottom: 10px;
+}
+
+.filename-h5 {
+    padding-left: 44px;
+    padding-top: 6px;
+    padding-bottom: 20px;
+}
+
+.select2-results__option[aria-selected="true"] {
+    display: none;
+}
+
+.btn-delete-image {
+    position: absolute;
+    background: none !important;
+    border: 0 !important;
+    color: #bababa;
+    outline: none !important;
+    padding: 0;
+}
+
+.btn-delete-image:hover {
+    color: #d73925 !important;
+}
+
+.show-image, .show-cv {
+    margin-bottom: 10px;
+    position: relative;
+}
+/*Single File Upload Thumbnai*/
