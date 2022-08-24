@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FormPostRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class PostController extends Controller
 {
@@ -34,16 +36,24 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FormPostRequest $request)
     {
 
-        $attrubutes = $request->validate([
-            'name'=> 'required|min:3|max:255',
-            'Description'=>'required|min:10|max:255',
-            'UserID'=>'required'
-        ]);
-        //dd($attrubutes);
-        Post::create($attrubutes);
+        $attributes = $request->validated();
+
+        if(isset($attributes['imagePath']))
+        {
+            $imageName = time() . '-' . $request->input('name') . '-' .  $attributes['imagePath']->getClientOriginalName();
+            $newImage = $attributes['imagePath'];
+            $testImage = Image::make($newImage->getRealpath())->resize(400, 300);
+            $testImage->save(public_path('uploads/' .$imageName));
+            $attributes['imagePath'] = "uploads/$imageName";
+
+        }
+
+
+
+        Post::create($attributes);
         return redirect('/home')->with('message','You have Successfully created a New Post');
     }
 

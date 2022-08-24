@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('UserID');
             $table->string('name');
             $table->text('Description');
+            $table->text('imagePath')->nullable();
             $table->timestamps();
         });
     }
