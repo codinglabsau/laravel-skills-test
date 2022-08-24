@@ -34,12 +34,13 @@
                             <label for="Description" class="block mb-2 uppercase font-bold text-xs text-gray-700">
                                 Description
                             </label>
-                            <input class="border border-gray-400 p-2 w-full rounded"
-                            type="text"
+                            <textarea class="border border-gray-400 p-2 w-full rounded resize-none"
+                            type="textarea"
                             name="Description"
                             id="Description"
+                                   rows="4"
                             required
-                            >
+                            ></textarea>
                         </div>
                         <div class="mb-6">
                                         <button type="submit" class="bg-blue-500  rounded py-2 px-4 hover:bg-amber-900">
@@ -51,10 +52,16 @@
             </div>
         </div>
     </div>
-    <div>
+    <h1 class="text-5xl text-center mb-10">Posts</h1>
+    <div class=" bg-zinc-500 rounded-3xl mx-auto p-3 max-w-7xl">
+
         @foreach($posts as $post)
-            {{$post->name}}
-            {{$post->Description}}
+
+            <div class="bg-zinc-600 rounded-3xl mx-10 p-5 mb-3">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$post->name}}</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400"> {{$post->Description}}.</p>
+            </div>
+
         @endforeach
     </div>
 </x-app-layout>
