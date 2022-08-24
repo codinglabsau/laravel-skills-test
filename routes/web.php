@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\PostController;
 
 Route::get('/', function () {
-    return view('home');
+    return redirect('/register');
 });
 
 Route::get('/register', function () {
@@ -16,6 +16,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::controller(PostController::class)->group(function () {
+    Route::get('/createPost', 'createPost');
     Route::post('/post/create/{user_id}', 'create');
     Route::get('/posts', 'posts');
 });

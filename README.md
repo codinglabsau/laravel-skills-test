@@ -5,4 +5,5 @@
 3. What was hard?
     The hardest part was setting up the project. Forking and cloning was the easy part
     but when it came to installing the dependencys there were a few extra things
-    I needed to do which I haven't done before. Which I had help to complete
+    I needed to do which I haven't done before. Which I had help to complete. Image upload
+    also caused some problems to overcome
