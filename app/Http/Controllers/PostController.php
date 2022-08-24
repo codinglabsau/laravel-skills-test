@@ -43,13 +43,13 @@ class PostController extends Controller
 
         if(isset($attributes['imagePath']))
         {
-            $imageName = time() . '-' . $request->input('name') . '-' .  $request->input('imagePath')->getClientOriginalName();
-            $newImage = $request->input('imagePath');
+            $imageName = time() . '-' . $request->input('name') . '-' .  $attributes['imagePath']->getClientOriginalName();
+            $newImage = $attributes['imagePath'];
             $testImage = Image::make($newImage->getRealpath())->resize(400, 300);
             $testImage->save(public_path('uploads/' .$imageName));
-            $attributes['imagePath'] = 'uploads/$imageName';
-        }
+            $attributes['imagePath'] = "uploads/$imageName";
 
+        }
 
 
 

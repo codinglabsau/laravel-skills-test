@@ -27,7 +27,7 @@ class FormPostRequest extends FormRequest
             'name'=> 'required|min:3|max:255',
             'Description'=>'required|min:10|max:255',
             'UserID'=>'required',
-            'imagePath'=>'mimes:jpg,png,jpeg|max:2048',
+            'imagePath'=>'mimes:jpg,png,jpeg',
         ];
     }
 }
