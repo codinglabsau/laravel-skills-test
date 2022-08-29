@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('auth.login');
 });
 
-Route::get('/home', [PostController::class, 'index']);
-Route::post('/home', [PostController::class, 'store']);
+Route::get('/home', [PostController::class, 'index'])->name('home');
+Route::post('/home', [PostController::class, 'store'])->middleware(['auth']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -24,10 +24,9 @@ class FormPostRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=> 'required|min:3|max:255',
-            'Description'=>'required|min:10|max:255',
-            'UserID'=>'required',
-            'imagePath'=>'mimes:jpg,png,jpeg',
+            'name'=> ['required','min:3','max:255'],
+            'description'=>['required','min:10','max:255'],
+            'image_path'=>['mimes:jpg,png,jpeg'],
         ];
     }
 }
