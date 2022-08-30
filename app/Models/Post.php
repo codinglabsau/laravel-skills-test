@@ -12,6 +12,7 @@ class Post extends Model
         'user_id',
         'name',
         'description',
+        'image_path'
     ];
     public function user(){
         $this->hasOne(User::class);

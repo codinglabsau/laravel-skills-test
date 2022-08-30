@@ -43,11 +43,17 @@ class PostController extends Controller
         $this->validate($request,[
             'name' => 'required',
             'description' => 'required|max:255',
+            'image' => 'required|mimes:jpg,png,jpeg|max:5048',
         ]);
+
+        $newImageName = time() . '_' . $request->name . '.' . $request->image->extension();
+        $request->image->move(public_path('images'), $newImageName);
+//        dd($request->all());
         $post = new Post();
         $post->user_id = Auth::id();
         $post->name = $request->name;
         $post->description = $request->description;
+        $post->image_path = $newImageName;
         $post->save();
 
         return redirect('post/create')->with('message', 'your post saved successfully');
