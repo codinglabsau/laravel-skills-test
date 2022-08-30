@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class PostController extends Controller
 {
@@ -13,7 +16,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+        return view('posts')->with('posts', $posts);
+
     }
 
     /**
@@ -23,7 +28,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('home');
     }
 
     /**
@@ -34,7 +39,19 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $this->validate($request,[
+            'name' => 'required',
+            'description' => 'required|max:255',
+        ]);
+        $post = new Post();
+        $post->user_id = Auth::id();
+        $post->name = $request->name;
+        $post->description = $request->description;
+        $post->save();
+
+        return redirect('post/create')->with('message', 'your post saved successfully');
+
     }
 
     /**
@@ -45,7 +62,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+        return view('posts')->with('post', $post);
     }
 
     /**
