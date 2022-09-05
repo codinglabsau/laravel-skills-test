@@ -28,7 +28,7 @@
                                 <div>
                                     <x-label for="image" :value="__('Upload Image')" />
 
-                                    <x-input-file id="image" class="block mt-1 w-full" type="file" name="image" />
+                                    <x-input-file id="image" class="block mt-1 w-full" name="image" />
 
                                 </div>
 

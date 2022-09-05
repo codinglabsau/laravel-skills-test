@@ -1,4 +1,4 @@
-<input {!! $attributes->merge(['class' => 'block
+<input type="file" {!! $attributes->merge(['class' => 'block
     w-full
     px-3
     py-1.5
